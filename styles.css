@@ -27,7 +27,7 @@ body {
 }
 
 /**encabezados**/
-.encabezado-servicios {
+.encabezados-servicios {
     max-width: 700px;
     text-align: center;
     margin: 0 auto 50px;
@@ -46,14 +46,14 @@ body {
     letter-spacing: 1.5px;
 }
 
-.encabezado-servicios h1 {
+.encabezados-servicios h1 {
     font-size: clamp(2rem, 5vw, 2.5rem);
     color: #2c74d7;
     margin-bottom: 10px;
     font-weight: 800;
 }
 
-.encabezado-servicios p {
+.encabezados-servicios p {
     font-size: 1.1rem;
     color: #4b5563;
     line-height: 1.6;
@@ -70,7 +70,7 @@ body {
     gap: 30px;
 }
 
-/****tarjetas de servicios**/
+/*tarjetas de servicios*/
 .tarjeta-servicio {
     position: relative;
     background-color: #ffffff;
@@ -121,9 +121,56 @@ body {
     margin-bottom: 20px;
 }
 
+/*botones*/
+.boton {
+    display: inline-block;
+    width: 100%;
+    padding: 13px 20 px;
+    background-color: #2c74d7;
+    color: #ffffff; 
+    font-weight: 700;
+    border-radius: 50px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.boton:hover {
+    background-color: #1f2937;
+    transform: translateY(-3px);
+}
 
 
+/*animaciones*/
+.tarjeta-servicio:nth-child(1) {
+    animation-delay: 0.2s;
+}
+.tarjeta-servicio:nth-child(2) {
+    animation-delay: 0.4s;
+}
+.tarjeta-servicio:nth-child(3) {
+    animation-delay: 0.6s;
+}
 
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes subir {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 
 
@@ -151,10 +198,10 @@ body {
         grid-template-columns: 1fr;
         gap: 18px;
     }
-    .encabezado-servicios {
+    .encabezados-servicios {
         margin-bottom: 30px;
     }
-    .encabezado-servicios h1 {
+    .encabezados-servicios h1 {
         font-size: 2rem;
     }
     .contenido-tarjeta p {
